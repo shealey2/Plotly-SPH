@@ -9,7 +9,7 @@ d3.json("https://github.com/shealey2/Plotly-SPH/samples.json").then(function(dat
 
 
 //Loads the HTML dropdown 'selDataset with the the test subjects
-d3.json("../samples.json").then(function(data) {
+d3.json("./static/js/samples.json").then(function(data) {
     var select = document.getElementById("selDataset");
 
     for(i=0; i<=data.samples.length; i++){
@@ -21,7 +21,7 @@ d3.json("../samples.json").then(function(data) {
 
 
 // //Creates default plots
-d3.json("https://github.com/shealey2/Plotly-SPH/samples.json").then(function(data) {
+d3.json("./static/js/samples.json").then(function(data) {
     for(i=0; i<=data.samples.length; i++){
             if(data.samples[i].id==940){
                 var values = Object.values(data.samples[i].sample_values);
@@ -105,7 +105,7 @@ d3.selectAll("#selDataset").on("change", getData);
 
 // Function called by DOM changes
 function getData() {
-d3.json("https://github.com/shealey2/Plotly-SPH/samples.json").then(function(data) {
+d3.json("./static/js/samples.json").then(function(data) {
     console.log("test")
 
     var dropdownMenu = d3.select("#selDataset");
