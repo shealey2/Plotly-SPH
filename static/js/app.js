@@ -1,7 +1,7 @@
 
 
 
-d3.json("../samples.json").then(function(data) {
+d3.json("samples.json").then(function(data) {
 
     console.log(data);
   });
@@ -21,7 +21,7 @@ d3.json("../samples.json").then(function(data) {
 
 
 // //Creates default plots
-d3.json("../samples.json").then(function(data) {
+d3.json("samples.json").then(function(data) {
     for(i=0; i<=data.samples.length; i++){
             if(data.samples[i].id==940){
                 var values = Object.values(data.samples[i].sample_values);
@@ -105,7 +105,7 @@ d3.selectAll("#selDataset").on("change", getData);
 
 // Function called by DOM changes
 function getData() {
-d3.json("../samples.json").then(function(data) {
+d3.json("samples.json").then(function(data) {
     console.log("test")
 
     var dropdownMenu = d3.select("#selDataset");
